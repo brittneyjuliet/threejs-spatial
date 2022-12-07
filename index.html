@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>WebXR Examples</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <ul id="list">
+  </ul>
+</body>
+<script>
+  const examples = [
+    {
+      title: 'Three.js Spatial Touch:',
+      url: 'threejs-spatial.html'
+    }
+  ]
+  const listEl = document.getElementById('list');
+  for (let example of examples) {
+    const liEl = document.createElement('li');
+    const bEl = document.createElement('b');
+    const aEl = document.createElement('a');
+    bEl.innerText = example.title;
+    aEl.href = `/${example.url}`;
+    aEl.innerText = example.url;
+    
+    liEl.append(bEl);
+    liEl.append(aEl);
+    listEl.append(liEl);
+  }
+
+</script>
+</html>
